@@ -5,7 +5,7 @@ module testbench;
   reg clk,rst;
   wire [3:0]q;
   
-  counter UUT(clk,rst,q);
+  counter UUT(clk,rst,q); // instantiation
   
   initial begin
     clk=0;
@@ -18,7 +18,7 @@ module testbench;
   end
   
   initial begin
-    $dumpfile("dump.vcd");
+    $dumpfile("dump.vcd");  // waveform generation
     $dumpvars(1,testbench);
   end
   
